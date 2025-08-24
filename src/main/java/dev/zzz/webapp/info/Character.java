@@ -1,12 +1,11 @@
-package dev.zzz.calculator.info;
-
-import java.util.Arrays;
+package dev.zzz.webapp.info;
 
 public class Character {
 
     private String name = "";
-    private String weapon = "";
-    private String[] disc_info = {""};
+    private Disc dics = new Disc();
+    private Weapon weapon = new Weapon();
+    private StatsPerCharacter statspercharacter = new StatsPerCharacter();
 
     private double pv = 0;
     private double atack = 0;
@@ -19,23 +18,29 @@ public class Character {
     private double perforation = 0;
     private double energie = 0;
 
-    public Character () {
+    private int pasive = 0;
+
+    public Character() {
     }
 
-    public Character(String name, String weapon, double pv, String[] disc_info, double atack, double defense, double impact, double critic_prob, double critic_dmg, double perforation, double anomalie_mastery, double anomalie_rate, double energie) {
+    public Character(String name, Disc dics, Weapon weapon, StatsPerCharacter statspercharacter, double pv,
+                     double atack, double defense, double impact, double critic_prob, double critic_dmg,
+                     double anomalie_rate, double anomalie_mastery, double perforation, double energie, int pasive) {
         this.name = name;
+        this.dics = dics;
         this.weapon = weapon;
+        this.statspercharacter = statspercharacter;
         this.pv = pv;
-        this.disc_info = disc_info;
         this.atack = atack;
         this.defense = defense;
         this.impact = impact;
         this.critic_prob = critic_prob;
         this.critic_dmg = critic_dmg;
-        this.perforation = perforation;
-        this.anomalie_mastery = anomalie_mastery;
         this.anomalie_rate = anomalie_rate;
+        this.anomalie_mastery = anomalie_mastery;
+        this.perforation = perforation;
         this.energie = energie;
+        this.pasive = pasive;
     }
 
     public String getName() {
@@ -46,11 +51,11 @@ public class Character {
         this.name = name;
     }
 
-    public String getWeapon() {
+    public Weapon getWeapon() {
         return weapon;
     }
 
-    public void setWeapon(String weapon) {
+    public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
     }
 
@@ -62,12 +67,12 @@ public class Character {
         this.pv = pv;
     }
 
-    public String[] getDisc_info() {
-        return disc_info;
+    public Disc getDics() {
+        return dics;
     }
 
-    public void setDisc_info(String[] disc_info) {
-        this.disc_info = disc_info;
+    public void setDics(Disc dics) {
+        this.dics = dics;
     }
 
     public double getAtack() {
@@ -142,12 +147,29 @@ public class Character {
         this.perforation = perforation;
     }
 
+    public int getPasive() {
+        return pasive;
+    }
+
+    public void setPasive(int pasive) {
+        this.pasive = pasive;
+    }
+
+    public StatsPerCharacter getStatspercharacter() {
+        return statspercharacter;
+    }
+
+    public void setStatspercharacter(StatsPerCharacter statspercharacter) {
+        this.statspercharacter = statspercharacter;
+    }
+
+    // BORRAR
     @Override
     public String toString() {
         return "Character{" +
                 "name='" + name + '\'' +
-                ", weapon='" + weapon + '\'' +
-                ", disc_info=" + Arrays.toString(disc_info) +
+                ", dics=" + dics +
+                ", weapon=" + weapon +
                 ", pv=" + pv +
                 ", atack=" + atack +
                 ", defense=" + defense +

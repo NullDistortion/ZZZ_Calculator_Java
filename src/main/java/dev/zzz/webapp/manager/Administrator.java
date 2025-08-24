@@ -1,6 +1,6 @@
-package dev.zzz.calculator.manager;
+package dev.zzz.webapp.manager;
 
-import dev.zzz.calculator.info.Character;
+import dev.zzz.webapp.info.Character;
 
 public class Administrator {
 

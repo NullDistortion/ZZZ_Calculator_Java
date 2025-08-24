@@ -1,6 +1,6 @@
-package dev.zzz.calculator.preview;
+package dev.zzz.webapp.preview;
 
-import dev.zzz.calculator.info.Character;
+import dev.zzz.webapp.info.Character;
 
 import java.util.Scanner;
 

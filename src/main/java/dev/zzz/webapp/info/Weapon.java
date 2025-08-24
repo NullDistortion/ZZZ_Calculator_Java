@@ -1,4 +1,4 @@
-package dev.zzz.calculator.info;
+package dev.zzz.webapp.info;
 
 public class Weapon {
 

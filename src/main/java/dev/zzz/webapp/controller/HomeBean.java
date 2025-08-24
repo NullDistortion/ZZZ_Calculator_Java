@@ -1,4 +1,4 @@
-package dev.zzz.calculator.controller;
+package dev.zzz.webapp.controller;
 
 
 import jakarta.annotation.ManagedBean;
